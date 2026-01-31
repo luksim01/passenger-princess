@@ -21,11 +21,12 @@ public class hand_movement : MonoBehaviour
         mouse_x = Input.GetAxisRaw("Mouse X");
         mouse_y = Input.GetAxisRaw("Mouse Y");
         scroll = Input.mouseScrollDelta.y;
+        Debug.Log(scroll);
     }
 
     void FixedUpdate()
     {
-        Move(handRb, new Vector3(mouse_x, scroll, mouse_y), speed);
+        Move(handRb, new Vector3(mouse_x, mouse_y, scroll), speed);
     }
 
     public static void Move(Rigidbody rigidbody, Vector3 direction, float speed)
@@ -40,6 +41,16 @@ public class hand_movement : MonoBehaviour
         if (collision.gameObject.CompareTag("cube"))
         {
             Debug.Log("cube hit");
+        }
+
+        if (collision.gameObject.CompareTag("head"))
+        {
+            Debug.Log("head hit");
+        }
+
+        if (collision.gameObject.CompareTag("phone"))
+        {
+            Debug.Log("phone hit");
         }
     }
 }
