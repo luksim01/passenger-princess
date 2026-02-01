@@ -118,18 +118,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature.001|Drive_Phone
-      takeName: Armature.001|Drive_Phone
+      name: Armature.001|Intro_1
+      takeName: Armature.001|Intro_1
       internalID: -6752110738876830680
       firstFrame: 0
-      lastFrame: 0
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -205,7 +205,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature.001|WheelAction
+      name: Armature.001|Drive_Idle (1)
       takeName: Armature.001|WheelAction
       internalID: -837983155757690527
       firstFrame: 0
