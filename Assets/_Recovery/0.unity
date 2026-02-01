@@ -168,6 +168,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &120869872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
+  m_PrefabInstance: {fileID: 1452120385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &160400206
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +450,14 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5449609602912828333, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4258411891960909470, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
       propertyPath: m_Name
@@ -1481,9 +1494,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::start_Game
   mainCamera: {fileID: 766522379}
-  princessCharacter: {fileID: 1362596615}
+  princessCharacter: {fileID: 120869872}
   targetPosition: {x: -1.62, y: -0.89, z: 0.732}
-  moveSpeed: 1
+  moveSpeed: 0.001
 --- !u!1 &1079173053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1829,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355431800}
   m_CullTransparentMesh: 1
---- !u!1001 &1362596614
+--- !u!1001 &1452120385
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1826,15 +1839,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.62
+      value: -1.6208441
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.29
+      value: -6.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.732
+      value: 0.7320755
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1864,20 +1877,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7898837177720983803, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
+      propertyPath: m_Name
+      value: r_hand
+      objectReference: {fileID: 0}
+    - target: {fileID: -102382942759407473, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
+      propertyPath: m_Name
+      value: r_wrist
+      objectReference: {fileID: 0}
+    - target: {fileID: 164850737481122324, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
+      propertyPath: m_Name
+      value: r_shoulder
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
       propertyPath: m_Name
       value: Princess_v1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047630304242113435, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
+      propertyPath: m_Name
+      value: r_forearm
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069578117487544106, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
+      propertyPath: m_Name
+      value: Waist
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623962017625924046, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
+      propertyPath: m_Name
+      value: r_hand_end
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
---- !u!1 &1362596615 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6d97a659936a7024a93f2b7f70419d64, type: 3}
-  m_PrefabInstance: {fileID: 1362596614}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1650801650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,5 +2340,5 @@ SceneRoots:
   - {fileID: 766522380}
   - {fileID: 1650801654}
   - {fileID: 830234970}
-  - {fileID: 1362596614}
   - {fileID: 2114889611}
+  - {fileID: 1452120385}

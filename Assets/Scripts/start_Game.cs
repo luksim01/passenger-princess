@@ -1,34 +1,34 @@
+using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
-
-// When button is clicked, onClick event
-
-// The Main_CinemachineCamera that is currently disabled will be enabled
 public class start_Game : MonoBehaviour
 {
     [SerializeField] private CinemachineCamera mainCamera;
-
-
-
-  // called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject princessCharacter;
+    [SerializeField] private Vector3 targetPosition;
+    [SerializeField] private float moveSpeed = 1f;
 
     public void OnButtonClick()
     {
-        mainCamera.gameObject.SetActive(true);
-        this.gameObject.SetActive(false);
         
+        StartCoroutine(MovePrincess());
+        gameObject.SetActive(false);
+        mainCamera.gameObject.SetActive(true);
     }
 
-    // Start is 
-
-    // Update is called once per frame
-    void Update()
+    private IEnumerator MovePrincess()
     {
-        
+        while (Vector3.Distance(princessCharacter.transform.position, targetPosition) > 0.1f)
+        {
+            princessCharacter.transform.position =
+                Vector3.MoveTowards(
+                    princessCharacter.transform.position,
+                    targetPosition,
+                    moveSpeed * Time.deltaTime
+                );
+
+            yield return null; // MUST be inside the loop
+        }
     }
 }
