@@ -12,7 +12,6 @@ public class hand_movement : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         handRb = GetComponent<Rigidbody>();
     }
 
@@ -37,9 +36,9 @@ public class hand_movement : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("cube"))
+        if (collision.gameObject.CompareTag("head"))
         {
-            Debug.Log("cube hit");
+            Debug.Log("head hit");
         }
     }
 }

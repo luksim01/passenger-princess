@@ -21,10 +21,17 @@ public class start_Game : MonoBehaviour
     public void OnButtonClick()
     {
         driverAnimator.SetBool("GameStart", true);
-        StartCoroutine(MovePrincess());
+        // StartCoroutine(MovePrincess());
         mainCamera.gameObject.SetActive(true);
         startButton.gameObject.SetActive(false);
         logoImage.gameObject.SetActive(false);
+        Invoke("ArmAppears", 2);
+    }
+
+    private void ArmAppears()
+    {
+        princessCharacter.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private IEnumerator MovePrincess()
