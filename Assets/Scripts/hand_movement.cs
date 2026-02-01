@@ -10,6 +10,9 @@ public class hand_movement : MonoBehaviour
     float mouse_y;
     float scroll;
 
+    [SerializeField] private Animator driverAnimator;
+
+
     void Start()
     {
         handRb = GetComponent<Rigidbody>();
@@ -20,6 +23,8 @@ public class hand_movement : MonoBehaviour
         mouse_x = Input.GetAxisRaw("Mouse X");
         mouse_y = Input.GetAxisRaw("Mouse Y");
         scroll = Input.mouseScrollDelta.y;
+
+        // Debug.Log(driverAnimator.GetParameter());
     }
 
     void FixedUpdate()
@@ -38,7 +43,14 @@ public class hand_movement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("head"))
         {
-            Debug.Log("head hit");
+            // Debug.Log("head hit");
+            driverAnimator.SetBool("Phone", false);
+            Invoke("TurnOnPhone", 2);
         }
+    }
+
+    void TurnOnPhone()
+    {
+        driverAnimator.SetBool("Phone", true);
     }
 }

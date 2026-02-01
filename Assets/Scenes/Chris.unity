@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770a0fa1b656cef4db2507fde484179b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarSpeed
-  driverAnimator: {fileID: 1136867862}
+  driverAnimator: {fileID: 2060740027}
   speedText: {fileID: 160400209}
   currentSpeed: 0
   normalSpeed: 60
@@ -430,79 +430,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3703e33e2b4b8d1458585671a43b39e3, type: 3}
---- !u!1001 &230250676
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.314
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.155
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.72
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_Name
-      value: Driver_v1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: fd4927aabb5ee494cbf4843316809feb, type: 2}
-    - target: {fileID: 5866666021909216657, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_UpdateMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-      propertyPath: m_AnimatePhysics
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
 --- !u!1001 &267612710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1121,12 +1048,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea5164c1feff32c4f828b6c34dc1f866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhoneScreenAnim
-  driverAnimator: {fileID: 1136867862}
+  driverAnimator: {fileID: 2060740027}
   phoneRenderer: {fileID: 425024405}
   emissionColor: {r: 1, g: 1, b: 1, a: 1}
   emissionStart: 0
   emissionEnd: 2
   animationDuration: 1
+  isOn: 0
 --- !u!64 &425024412
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3006,7 +2934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: -11.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3038,7 +2966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5449609602912828333, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
       propertyPath: m_Name
@@ -3706,7 +3634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1118591688
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3828,11 +3756,6 @@ Transform:
   - {fileID: 958728088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -8.7, y: 48.68, z: 0.075}
---- !u!95 &1136867862 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-  m_PrefabInstance: {fileID: 230250676}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1224684213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4589,6 +4512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hand_movement
   speed: 10
+  driverAnimator: {fileID: 0}
 --- !u!114 &1395553288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6519,7 +6443,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 1835067877}
+    TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -7401,11 +7325,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!4 &1835067877 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
-  m_PrefabInstance: {fileID: 230250676}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1876209009
 GameObject:
   m_ObjectHideFlags: 0
@@ -7558,6 +7477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::hand_movement
   speed: 10
+  driverAnimator: {fileID: 2060740027}
 --- !u!54 &1876209013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8222,6 +8142,11 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!95 &2060740027 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7e7fc624e323fd4468c3c706eb06a37c, type: 3}
+  m_PrefabInstance: {fileID: 843960945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &2066543528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8485,7 +8410,7 @@ MonoBehaviour:
   princessCharacter: {fileID: 1118591687}
   targetPosition: {x: -1.62, y: -0.89, z: 0.732}
   moveSpeed: 1
-  driverAnimator: {fileID: 1136867862}
+  driverAnimator: {fileID: 2060740027}
   startButton: {fileID: 893402440}
   logoImage: {fileID: 649507440}
 --- !u!1660057539 &9223372036854775807
@@ -8502,7 +8427,6 @@ SceneRoots:
   - {fileID: 1678099415}
   - {fileID: 1224684213}
   - {fileID: 1896370840}
-  - {fileID: 230250676}
   - {fileID: 561512113}
   - {fileID: 1079173056}
   - {fileID: 1290375004}

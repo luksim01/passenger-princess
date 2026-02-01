@@ -20,12 +20,23 @@ public class start_Game : MonoBehaviour
 
     public void OnButtonClick()
     {
-        driverAnimator.SetBool("GameStart", true);
         // StartCoroutine(MovePrincess());
         mainCamera.gameObject.SetActive(true);
         startButton.gameObject.SetActive(false);
         logoImage.gameObject.SetActive(false);
+        driverAnimator.SetBool("GameStart", true);
+
         Invoke("ArmAppears", 2);
+        Invoke("TurnOnScreen", 2);
+    }
+
+    void TurnOnScreen()
+    {
+        if (!driverAnimator.GetBool("Phone"))
+        {
+            driverAnimator.SetBool("Phone", true);
+        }
+        Invoke("TurnOnScreen", 2);
     }
 
     private void ArmAppears()
