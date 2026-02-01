@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class start_Game : MonoBehaviour
 {
@@ -8,13 +9,22 @@ public class start_Game : MonoBehaviour
     [SerializeField] private GameObject princessCharacter;
     [SerializeField] private Vector3 targetPosition;
     [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private Animator driverAnimator;
+    [SerializeField] private Button startButton;
+    [SerializeField] private Image logoImage;
+
+    private void Start()
+    {
+     //   driverAnimator = GetComponent<Animator>();
+    }
 
     public void OnButtonClick()
     {
-        
+        driverAnimator.SetBool("GameStart", true);
         StartCoroutine(MovePrincess());
-        gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(true);
+        startButton.gameObject.SetActive(false);
+        logoImage.gameObject.SetActive(false);
     }
 
     private IEnumerator MovePrincess()
