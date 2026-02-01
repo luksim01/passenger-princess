@@ -12,6 +12,9 @@ public class hand_movement : MonoBehaviour
 
     [SerializeField] private Animator driverAnimator;
 
+    [SerializeField] private AudioSource punchSound;
+    [SerializeField] private AudioClip punchClip;
+
 
     void Start()
     {
@@ -46,6 +49,12 @@ public class hand_movement : MonoBehaviour
             // Debug.Log("head hit");
             driverAnimator.SetBool("Phone", false);
             Invoke("TurnOnPhone", 2);
+            punchSound.PlayOneShot(punchClip);
+        }
+
+        if (collision.gameObject.CompareTag("body"))
+        {
+            punchSound.PlayOneShot(punchClip);
         }
     }
 
