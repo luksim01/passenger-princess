@@ -14,7 +14,9 @@ public class PhoneScreenAnim : MonoBehaviour
     [SerializeField] private float animationDuration = 1f;
 
     private MaterialPropertyBlock mpb;
-    private bool isOn = false;
+    public bool isOn = false;
+
+    bool phoneParam;
     private Coroutine emissionRoutine;
 
     void Awake()
@@ -24,13 +26,13 @@ public class PhoneScreenAnim : MonoBehaviour
 
     void Update()
     {
-        bool phoneParam = driverAnimator.GetBool("Phone");
+        isOn = driverAnimator.GetBool("Phone");
 
-        if (phoneParam && !isOn)
+        if (!isOn)
         {
             TurnOnScreen();
         }
-        else if (!phoneParam && isOn)
+        else if (isOn)
         {
             TurnOffScreen();
         }
@@ -38,8 +40,6 @@ public class PhoneScreenAnim : MonoBehaviour
 
     void TurnOnScreen()
     {
-        isOn = true;
-
         if (emissionRoutine != null)
             StopCoroutine(emissionRoutine);
 
@@ -48,8 +48,6 @@ public class PhoneScreenAnim : MonoBehaviour
 
     void TurnOffScreen()
     {
-        isOn = false;
-
         if (emissionRoutine != null)
             StopCoroutine(emissionRoutine);
 
